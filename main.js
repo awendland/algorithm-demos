@@ -72,6 +72,14 @@ angular.module('kMeansDemo', [])
 			points[i].x = (points[i].x - 60) / (77 - 60);
 			points[i].y = (points[i].y - 20) / (34 - 20);
 		}
+		/*var points = [];
+		for (var i = 0; i < 50; i++) {
+			points.push({
+				x: Math.random(),
+				y: Math.random(),
+				color: 'black'
+			})
+		}*/
 
 		// Euclidian Distance Function
 		function dist(p1, p2) {
@@ -84,7 +92,7 @@ angular.module('kMeansDemo', [])
 		var centroids = [];
 		function setupCentroids() {
 			var colors = ['green', 'red', 'yellow', 'orange', 'purple'];
-			for (var centroidIndex = 0; centroidIndex < 2; centroidIndex++) {
+			for (var centroidIndex = 0; centroidIndex < 3; centroidIndex++) {
 				var rndPoint = points[Math.round(Math.random() * points.length)];
 				centroids[centroidIndex] = {
 					x: rndPoint.x,
