@@ -1,0 +1,19 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Page Styling */
+
+@dimens: 400px;
+scatter-plot {
+    display: block;
+    width: @dimens;
+    height: @dimens;
+    border: 1px solid black;
+    canvas {
+    }
+}
